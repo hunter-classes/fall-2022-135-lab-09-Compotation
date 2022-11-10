@@ -1,11 +1,13 @@
+CXXFLAGS = -g -Wall
+
 all: main.o funcs.o
-	g++ -o main main.o funcs.o
+	g++ $(CXXFLAGS) -o main main.o funcs.o
 
 main: main.o funcs.o
-	g++ -o main main.o funcs.o
+	g++ $(CXXFLAGS) -o main main.o funcs.o
 
 tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
+	g++ $(CXXFLAGS) -o tests tests.o funcs.o
 
 
 

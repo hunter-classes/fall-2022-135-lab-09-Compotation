@@ -11,7 +11,7 @@ tests: tests.o funcs.o
 
 
 
-funcs.o: funcs.cpp funcs.h
+funcs.o: funcs.cpp funcs.h coord3d.h
 
 main.o: main.cpp funcs.h
 

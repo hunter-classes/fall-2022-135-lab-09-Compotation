@@ -26,3 +26,17 @@ TEST_CASE("move") {
   move(&pointP1, &vel1, 2);
   CHECK_EQ(pointP1, newPointP1);
 }
+
+TEST_CASE("create point") {
+  Coord3D point1 = {2, 3, 4};
+  CHECK_EQ(*createCoord3D(2, 3, 4), point1);
+  Coord3D point2 = {1, 1, 1};
+  CHECK_EQ(*createCoord3D(1, 1, 1), point2);
+}
+
+TEST_CASE("delete point") {
+  Coord3D *pointer1 = createCoord3D(2, 3, 4);
+  Coord3D point1 = {2, 3, 4};
+  deleteCoord3D(pointer1);
+//  CHECK_NE(*pointer1, point1);
+}
